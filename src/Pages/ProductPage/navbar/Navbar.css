@@ -1,0 +1,24 @@
+.category:hover,
+.category:active,
+.category:focus {
+  background-color: #313262 !important;
+}
+
+.dropdown-menu {
+  color: white;
+}
+.dropdown-menu li {
+  background-color: #313262;
+}
+.dropdown-menu li:hover {
+  background-color: #ffffff;
+}
+
+.dropdown-menu li a {
+  color: white;
+  padding: 15px 10px 15px 10px;
+}
+.dropdown-menu li a:hover {
+  background-color: white;
+  color: #313262;
+}
