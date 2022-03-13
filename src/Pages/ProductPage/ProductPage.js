@@ -4,7 +4,7 @@ import Heading from "./heading/Heading";
 import Navbar from "./navbar/Navbar";
 import Product from "./products/Product";
 import { Container } from "reactstrap";
-import Footer from "./footer/Footer";
+
 import { Products } from "./products/product-list";
 
 const ProductPage = () => {
@@ -39,7 +39,7 @@ const ProductPage = () => {
         <Navbar parentCallback={handleCallback} changes={onSearchChange} />
         <Product productchange={filterproduct} />
       </Container>
-      <Footer />
+
     </div>
   );
 };
