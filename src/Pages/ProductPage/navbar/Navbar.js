@@ -11,10 +11,9 @@ const Navbar = (props) => {
       props.parentCallback(event.target.name);
     }
 
-    
     event.preventDefault();
   };
- 
+
   return (
     <div className="search white pb-3">
       <div>

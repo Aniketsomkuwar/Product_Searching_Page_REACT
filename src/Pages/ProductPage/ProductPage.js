@@ -11,8 +11,6 @@ const ProductPage = () => {
   const [Search, setSearch] = useState("");
   const [menu, setmenu] = useState("");
 
-
-
   const handleCallback = (newChild) => {
     setmenu(newChild);
   };
@@ -22,13 +20,13 @@ const ProductPage = () => {
   };
 
   let filterproduct = Products.filter((product) => {
-    if (menu === "" || menu===undefined ) {
+    if (menu === "" || menu === undefined) {
       return product.productname.toLowerCase().includes(Search.toLowerCase());
-   
     } else {
- 
-      return ( 
-        product.category.includes(menu) && product.productname.toLowerCase().includes(Search.toLowerCase()))
+      return (
+        product.category.includes(menu) &&
+        product.productname.toLowerCase().includes(Search.toLowerCase())
+      );
     }
   });
 
@@ -39,7 +37,6 @@ const ProductPage = () => {
         <Navbar parentCallback={handleCallback} changes={onSearchChange} />
         <Product productchange={filterproduct} />
       </Container>
-
     </div>
   );
 };
