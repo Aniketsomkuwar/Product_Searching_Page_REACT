@@ -1,13 +1,17 @@
 import ProductCard from "./ProductCard/ProductCard";
 import { Container, Row, Col } from "reactstrap";
-import React, { useEffect } from "react";
+import React ,{useEffect} from 'react';
 const Product = (props) => {
+
   useEffect(() => {
-    console.log("use effect");
-    setTimeout(() => {
-      console.log("used");
-    }, 1000);
-  }, [props.productchange]);
+ console.log("use effect");
+      setTimeout(()=>{
+
+console.log("used");
+
+      },1000)
+    },[props.productchange]
+  );
 
   return (
     <div>

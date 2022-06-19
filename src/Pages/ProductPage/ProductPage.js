@@ -4,12 +4,14 @@ import Heading from "./heading/Heading";
 import Navbar from "./navbar/Navbar";
 import Product from "./products/Product";
 import { Container } from "reactstrap";
-
+import Footer from "./footer/Footer";
 import { Products } from "./products/product-list";
 
 const ProductPage = () => {
   const [Search, setSearch] = useState("");
   const [menu, setmenu] = useState("");
+
+
 
   const handleCallback = (newChild) => {
     setmenu(newChild);
@@ -20,13 +22,13 @@ const ProductPage = () => {
   };
 
   let filterproduct = Products.filter((product) => {
-    if (menu === "" || menu === undefined) {
+    if (menu === "" || menu===undefined ) {
       return product.productname.toLowerCase().includes(Search.toLowerCase());
+   
     } else {
-      return (
-        product.category.includes(menu) &&
-        product.productname.toLowerCase().includes(Search.toLowerCase())
-      );
+ 
+      return ( 
+        product.category.includes(menu) && product.productname.toLowerCase().includes(Search.toLowerCase()))
     }
   });
 
@@ -37,6 +39,7 @@ const ProductPage = () => {
         <Navbar parentCallback={handleCallback} changes={onSearchChange} />
         <Product productchange={filterproduct} />
       </Container>
+      <Footer />
     </div>
   );
 };
